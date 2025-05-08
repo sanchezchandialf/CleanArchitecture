@@ -65,13 +65,13 @@ show(ToUpperPure(beer).Name);
 show(beer.Name);
 show(ToUpperPure(beer).Name);
 
-return NewMethod();
 
 
 
-  static  int sumas(int a, int b)
+
+ int sumas(int a, int b)
 {
-    return a + b;
+   return a + b;
 
 }
     
