@@ -23,6 +23,18 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestComponent", "TestCompon
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepositoryComponent", "RepositoryComponent\RepositoryComponent.csproj", "{9F2366D6-9143-4712-BF7F-493100E08C10}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Clean Architecture", "Clean Architecture", "{9BA68A1C-88DF-4D91-86E4-6DB9E1ACD4E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CA-EnterpriseLayer", "CA-EnterpriseLayer\CA-EnterpriseLayer.csproj", "{870168DC-0043-4BC4-9E38-D47449F00233}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CA-ApplicationLayer", "CA-ApplicationLayer\CA-ApplicationLayer.csproj", "{D3EE0A84-FC9C-418D-81F3-67F2CD078462}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CA_InterfaceAdapters_Data", "CA_InterfaceAdapters_Data\CA_InterfaceAdapters_Data.csproj", "{F2493DB1-7971-431E-8F33-4CC97223460C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CA-InterfaceAdapters_Repository", "CA-InterfaceAdapters_Repository\CA-InterfaceAdapters_Repository.csproj", "{FDAB02CE-CC40-4797-9657-49F7A88138FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CA-FrameworksDrivers-API", "CA-FrameworksDrivers-API\CA-FrameworksDrivers-API.csproj", "{721FA7F4-7A9B-42F8-8BF2-2BA0C70C3588}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,9 +81,36 @@ Global
 		{9F2366D6-9143-4712-BF7F-493100E08C10}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F2366D6-9143-4712-BF7F-493100E08C10}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F2366D6-9143-4712-BF7F-493100E08C10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{870168DC-0043-4BC4-9E38-D47449F00233}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{870168DC-0043-4BC4-9E38-D47449F00233}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{870168DC-0043-4BC4-9E38-D47449F00233}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{870168DC-0043-4BC4-9E38-D47449F00233}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3EE0A84-FC9C-418D-81F3-67F2CD078462}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3EE0A84-FC9C-418D-81F3-67F2CD078462}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3EE0A84-FC9C-418D-81F3-67F2CD078462}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3EE0A84-FC9C-418D-81F3-67F2CD078462}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2493DB1-7971-431E-8F33-4CC97223460C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2493DB1-7971-431E-8F33-4CC97223460C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2493DB1-7971-431E-8F33-4CC97223460C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2493DB1-7971-431E-8F33-4CC97223460C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDAB02CE-CC40-4797-9657-49F7A88138FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDAB02CE-CC40-4797-9657-49F7A88138FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDAB02CE-CC40-4797-9657-49F7A88138FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDAB02CE-CC40-4797-9657-49F7A88138FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{721FA7F4-7A9B-42F8-8BF2-2BA0C70C3588}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{721FA7F4-7A9B-42F8-8BF2-2BA0C70C3588}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{721FA7F4-7A9B-42F8-8BF2-2BA0C70C3588}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{721FA7F4-7A9B-42F8-8BF2-2BA0C70C3588}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{870168DC-0043-4BC4-9E38-D47449F00233} = {9BA68A1C-88DF-4D91-86E4-6DB9E1ACD4E1}
+		{D3EE0A84-FC9C-418D-81F3-67F2CD078462} = {9BA68A1C-88DF-4D91-86E4-6DB9E1ACD4E1}
+		{F2493DB1-7971-431E-8F33-4CC97223460C} = {9BA68A1C-88DF-4D91-86E4-6DB9E1ACD4E1}
+		{FDAB02CE-CC40-4797-9657-49F7A88138FB} = {9BA68A1C-88DF-4D91-86E4-6DB9E1ACD4E1}
+		{721FA7F4-7A9B-42F8-8BF2-2BA0C70C3588} = {9BA68A1C-88DF-4D91-86E4-6DB9E1ACD4E1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {56FB7B47-85DF-4C9B-AC55-BA174E7CD549}
