@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using CA_
+using Microsoft.EntityFrameworkCore;
 using CA_EnterpriseLayer;
 namespace CA_InterfaceAdapters_Data
 {
@@ -7,7 +8,7 @@ namespace CA_InterfaceAdapters_Data
         public AppDbContext(DbContextOptions<AppDbContext>options)
             : base(options)
         { }
-        public  DbSet<Beer>Beers { get; set; }
+        public  DbSet<BeerModels>Beers { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

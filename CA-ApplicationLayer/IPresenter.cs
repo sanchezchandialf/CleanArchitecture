@@ -5,13 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using CA_EnterpriseLayer;
 
-
 namespace CA_ApplicationLayer
 {
-    public interface Irepository<T>
+    public interface IPresenter<TEntity, TOutput>
     {
-        Task<IEnumerable<T>> GetAllAsync();
-        Task<T> GetByIdAsync(int id);
-        Task AddAsync(T beer);
+        public IEnumerable<TOutput>Present(IEnumerable<TEntity>data);
     }
 }
