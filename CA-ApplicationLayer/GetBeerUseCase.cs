@@ -14,7 +14,7 @@ namespace CA_ApplicationLayer
 
         public async Task<IEnumerable<TOutput>> ExecuteAsync()
         {
-           var beers= return await _beerRepository.GetAllAsync();
+           var beers=  await _beerRepository.GetAllAsync();
             return _presenter.Present(beers);
         }
     }

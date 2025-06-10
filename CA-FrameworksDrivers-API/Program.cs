@@ -2,6 +2,8 @@
 using CA_ApplicationLayer;
 using CA_EnterpriseLayer;
 using CA_InterfaceAdapters_Data;
+using CA_InterfaceAdapters_Mappers;
+using CA_InterfaceAdapters_Mappers.Dtos.Request;
 using CA_InterfaceAdapters_Models;
 using CA_InterfaceAdapters_Presenters;
 using CA_InterfaceAdapters_Repository;
@@ -25,6 +27,8 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 builder.Services.AddScoped<Irepository<Beer>, Repository>();
 builder.Services.AddScoped<IPresenter<Beer, BeerviewModel>, BeerPresenter>();
 builder.Services.AddScoped<GetBeerUseCase<Beer,BeerviewModel>>();
+builder.Services.AddScoped<AddBeerUseCase<BeerRequestDTO>>();
+builder.Services.AddScoped<Imapper<BeerRequestDTO,Beer>,BeerMapper>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -39,8 +43,18 @@ app.MapGet("/beer", async ([FromServices] GetBeerUseCase<BeerModel, BeerviewMode
     return await beerUseCase.ExecuteAsync();
 })
 .WithName("beers");
-app.UseHttpsRedirection();
 
+app.MapPost("/beer", async (BeerRequestDTO beerRequest,
+    AddBeerUseCase<BeerRequestDTO> beerUseCase)
+    =>
+    {
+        await beerUseCase.ExecuteAsync(beerRequest);
+        return Results.Created();
+    })
+    .WithName("addBeer");
+ 
+
+app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();

@@ -18,6 +18,7 @@
     <ProjectReference Include="..\CA-ApplicationLayer\CA-ApplicationLayer.csproj" />
     <ProjectReference Include="..\CA-EnterpriseLayer\CA-EnterpriseLayer.csproj" />
     <ProjectReference Include="..\CA-InterfaceAdapters_Repository\CA-InterfaceAdapters_Repository.csproj" />
+    <ProjectReference Include="..\CA_InterfaceAdapters-Presenters\CA_InterfaceAdapters-Presenters.csproj" />
     <ProjectReference Include="..\CA_InterfaceAdapters_Data\CA_InterfaceAdapters_Data.csproj" />
   </ItemGroup>
 
